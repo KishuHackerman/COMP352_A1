@@ -1,10 +1,3 @@
-/* Pseudo code for Tetranacci function for multiple recursion
- * function Tetranacci(n):
- *      if n == 0 or n == 1 or n == 2: return 0
- *      if n == 3: return 1
- *      return Tetranacci(n-1) + Tetranacci(n-2) + Tetranacci(n-3) + Tetranacci(n-4)
- */
-
 /** Java Implementation
  * The java program calculates Tetranacci numbers by using
  * two different recursive methods. It compares their performance
@@ -12,11 +5,27 @@
  */
 public class Tetranacci {
 
+    /**
+     * This method follows an exponential time complexity due to redundant
+     * recursive calls, making it inefficient for large values of n.
+     */
+    /*
+    Pseudo code
+    function Tetranacci(n):
+        if n == 0 or n == 1 or n == 2: return 0
+        if n == 3: return 1
+        return Tetranacci(n-1) + Tetranacci(n-2) + Tetranacci(n-3) + Tetranacci(n-4)
+     */
     public static long multipleRecursion(int n){
         if (n == 0 || n == 1 || n == 2) return 0;
         if (n == 3) return 1;
         return multipleRecursion(n-1) + multipleRecursion(n-2) + multipleRecursion(n-3) + multipleRecursion(n-4);
     }
+
+    /**
+     * This method avoid redundant calculations by carrying forward the last four
+     * computed values, making it more efficient with linear time complexity O(n)
+     */
     /*
     Pseudo code
      function LinearTetranacci(n, a, b, c, d):
