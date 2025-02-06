@@ -37,6 +37,11 @@ public class Tetranacci {
         return linearRecursion(n-1, b, c, d, a+b+c+d);
     }
 
+    /**
+     *The main method will compare the performance of multiple recursive Tetranacci calculations.
+     * It will use specific test values while using both the multiple recursive approach and linear recursive approach.
+     * It measures and records the execution time of each approach and writes the results to the text file.
+     */
     public static void main(String[] args) {
         int[] values = {2,11,16,20,30,40,50};
         try (java.io.PrintWriter writer = new java.io.PrintWriter("TetraOut.txt")) {
