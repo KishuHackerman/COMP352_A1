@@ -11,12 +11,18 @@
  * and writes the result in a text file.
  */
 public class Tetranacci {
+
     public static long multipleRecursion(int n){
         if (n == 0 || n == 1 || n == 2) return 0;
         if (n == 3) return 1;
         return multipleRecursion(n-1) + multipleRecursion(n-2) + multipleRecursion(n-3) + multipleRecursion(n-4);
     }
-
+    /*
+    Pseudo code
+     function LinearTetranacci(n, a, b, c, d):
+        if n == 0: return a
+        return LinearTetranacci(n-1, b, c, d, a+b+c+d)
+     */
     public static long linearRecursion(int n, long a, long b, long c, long d) {
         if (n == 0) return a;
         return linearRecursion(n-1, b, c, d, a+b+c+d);
