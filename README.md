@@ -26,3 +26,9 @@ A Java program that computes Tetranacci numbers using two recursive approaches a
 1. Compile the program:
    ```bash
    javac Tetranacci.java
+
+2. Run the program
+   ```bash
+   java Tetranacci
+
+The program writes performance results to a file named TetraOut.txt.
